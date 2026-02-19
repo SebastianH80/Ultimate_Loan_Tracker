@@ -1,4 +1,4 @@
 package UltimateLoanTracker;
 
-public class book {
+public class Book {
 }

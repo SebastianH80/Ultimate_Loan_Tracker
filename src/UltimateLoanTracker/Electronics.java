@@ -1,4 +1,4 @@
 package UltimateLoanTracker;
 
-public class electronics {
+public class Electronics {
 }

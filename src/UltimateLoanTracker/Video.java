@@ -1,4 +1,4 @@
 package UltimateLoanTracker;
 
-public class video {
+public class Video {
 }
