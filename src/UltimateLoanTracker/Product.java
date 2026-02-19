@@ -39,4 +39,22 @@ public abstract class Product {
     public void setLateFee(double lateFee) {
         this.lateFee = lateFee;
     }
+
+    //Logisk Metode
+
+    public void decreaseLoanDays() {
+        loanDays--;
+    }
+
+    public boolean LoanDurationExpired() {
+        return loanDays <= 0;
+    }
+
+    //Polymorhic method (Vigtigt)
+    public abstract void useProduct();
+
+    @Override
+    public String toString() {
+        return "Product: " + title + " | Loan days left: " + loanDays + " | Late fee per late day: " + lateFee;
+    }
 }
