@@ -4,8 +4,6 @@ public class Book extends Product {
 
     private String author;
 
-    private static final int loanDays = 7;
-    private static final double lateFee = 1.5;
 
     // Constructor
 
