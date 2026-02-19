@@ -16,8 +16,8 @@ public class Electronics extends Product{
     @Override
     public String toString() {
         return "Electronic \t" + super.toString() +
-                "Model: \t" + this.model +
-                "Kitlevel\t: " + this.kitLevel +
-                "Basevalue\t: " + this.baseValue;
+                "\nModel: \t" + this.model +
+                "\nKitlevel\t: " + this.kitLevel +
+                "\nBasevalue\t: " + this.baseValue;
     }
 }
