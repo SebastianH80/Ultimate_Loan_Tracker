@@ -1,4 +1,23 @@
 package UltimateLoanTracker;
 
-public class Electronics {
+public class Electronics extends Product{
+    private String model;
+    private String kitLevel;
+    private String baseValue;
+
+    //Constructor
+    public Electronics(String title, int loanDays, double lateFee, String model,String kitLevel, String baseValue) {
+        super(title, loanDays, lateFee);
+        this.model = model;
+        this.kitLevel = kitLevel;
+        this.baseValue = baseValue;
+    }
+
+    @Override
+    public String toString() {
+        return "Electronic \t" + super.toString() +
+                "Model: \t" + this.model +
+                "Kitlevel\t: " + this.kitLevel +
+                "Basevalue\t: " + this.baseValue;
+    }
 }
