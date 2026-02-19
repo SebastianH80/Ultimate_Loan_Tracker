@@ -1,7 +1,7 @@
 package UltimateLoanTracker;
 
 public abstract class Product {
-    // Attributes
+    // Attributers
     private String title;
     private int loanDays;
     private double lateFee;
