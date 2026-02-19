@@ -13,8 +13,6 @@ public class Electronics extends Product{
         this.baseValue = baseValue;
     }
 
-
-
     @Override
     public String toString() {
         return "Electronic \t" + super.toString() +
