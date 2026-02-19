@@ -6,11 +6,11 @@ public class LoanTrackerTest {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(system.in);
+        Scanner sc = new Scanner(System.in);
 
         Product[] loanTracker = createLoanTracker(sc);
 
-        printLoantracker(loanTracker);
+        printLoanTracker(loanTracker);
 
         simulateDays(loanTracker);
 
@@ -26,19 +26,23 @@ public class LoanTrackerTest {
             String type = sc.nextLine();
 
             System.out.println("Enter product name:");
-            String name = sc.nextLine();
+            String title = sc.nextLine();
 
-            System.out.println("Enter Loan days:");
-            int days = sc.nextLine();
-            sc.nextLine();
-
-            switch (type.equalsIgnoreCase()) {
-                case "book";
-                loanTracker[i] = new Book (title, loanDays, lateFee,);
-
-                case "Electronics";
-                loanTracker = new Electronics (title, loanDays, lateFee, model, kitLevel, baseValue)
+            switch (type.toLowerCase()) {
+                case "book":
+                loanTracker[i] = new Book(title);
+                    break;
+                case "Electronics":
+                loanTracker = new Electronics(title);
+                    break;
+                case "video":
+                    loanTracker[i] = new Video(title);
+                    break;
+                default:
+                    System.out.println("Unknown type");
             }
         }
+
+        return loanTracker;
     }
 }
