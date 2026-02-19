@@ -1,6 +1,6 @@
 package UltimateLoanTracker;
 
-//class Video extends Product {
+class Video extends Product {
 
     private double duration;
 

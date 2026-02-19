@@ -8,11 +8,12 @@ public class LoanTrackerTest {
 
         Scanner sc = new Scanner(System.in);
 
-        Product[] electronics = new Product [4];
+        Product[] Product = new Product [4];
 
-        //Product[0] = new Book ("java for beginners", 7, "John Doe")
+        Product[0] = new Book ("java for beginners", 7, 1.5, "John Doe");
         Product[1] = new Electronics("Raspberry Pi 48", 3, 40, "4B","", 500);
         Product[2] = new Electronics("Arduino Beginner Kit", 2, 20, "","Beginner", 400);
+        Product[3] = new Video("Intro to Robotics", 5, 3, 120);
 
         printLoanTracker(loanTracker);
 
@@ -21,6 +22,7 @@ public class LoanTrackerTest {
         sc.close();
     }
 
+    /*
     public static Product[] createloanTracker(Scanner sc) {
 
         Product[] loanTracker = new Product[3];
@@ -48,5 +50,39 @@ public class LoanTrackerTest {
         }
 
         return loanTracker;
+        */
+
+
+    }
+
+    public static void printProduct(Product[] loanTracker) {
+        System.out.println("\n --- all Items ---");
+
+        for (Product product : loanTracker) {
+            System.out.println(product);
+        }
+    }
+
+
+    public static void simulateDays(Product[] loanTracker) {
+
+        for (int day = 1; day <= 3; day++) {
+
+            System.out.println("\n --- Day " + day + "---");
+
+            for (Product product : loanTracker) {
+
+                product.decreaseLoanDays();
+
+                if (product.LoanDurationExpired()) {
+                    System.out.println(product.getTitle() + " Loan Period has ended ");
+                } else {
+                    System.out.println(product);
+
+                    //Clean Polymorphism
+                    product.useProduct();
+                }
+            }
+        }
     }
 }
