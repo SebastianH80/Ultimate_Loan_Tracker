@@ -1,5 +1,19 @@
 package UltimateLoanTracker;
 
-public class Video {
-    //test
+class Video extends Product {
+
+    private double duration;
+
+
+    public Video (String title, int loanDays, double lateFee, double duration){
+        super(title, loanDays, lateFee);
+        this.duration = duration;
+    }
+
+    @Override
+    public String toString() {
+        return "Video \t" + super.toString() +
+                "\n duration (minutes): \t" + this.duration;
+
+    }
 }
