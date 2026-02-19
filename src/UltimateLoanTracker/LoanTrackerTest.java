@@ -8,7 +8,11 @@ public class LoanTrackerTest {
 
         Scanner sc = new Scanner(System.in);
 
-        Product[] loanTracker = createLoanTracker(sc);
+        Product[] electronics = new Product [4];
+
+        //Product[0] = new Book ("java for beginners", 7, "John Doe")
+        Product[1] = new Electronics("Raspberry Pi 48", 3, 40, "4B","", 500);
+        Product[2] = new Electronics("Arduino Beginner Kit", 2, 20, "","Beginner", 400);
 
         printLoanTracker(loanTracker);
 
@@ -33,7 +37,7 @@ public class LoanTrackerTest {
                 loanTracker[i] = new Book(title);
                     break;
                 case "Electronics":
-                loanTracker = new Electronics(title);
+                loanTracker = new Electronics(title, loanDays, lateFee, model, kitLevel, baseValue);
                     break;
                 case "video":
                     loanTracker[i] = new Video(title);
