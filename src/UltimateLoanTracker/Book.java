@@ -8,11 +8,8 @@ public class Book extends Product {
     private static final double lateFee = 1.5;
 
     // Constructor
-    public Book(String title) {
-        this(title, "John Doe");
-    }
 
-    public Book(String title, String author) {
+    public Book(String title, int loanDays, double lateFee, String author) {
         super(title, loanDays, lateFee);
         this.author = author;
     }
