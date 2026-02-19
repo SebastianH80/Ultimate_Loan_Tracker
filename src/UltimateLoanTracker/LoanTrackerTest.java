@@ -34,7 +34,7 @@ public class LoanTrackerTest {
 
             switch (type.equalsIgnoreCase()) {
                 case "book";
-                //loanTracker[i] = new Book (title, loanDays, lateFee,);
+                loanTracker[i] = new Book (title, loanDays, lateFee,);
 
                 case "Electronics";
                 loanTracker = new Electronics (title, loanDays, lateFee, model, kitLevel, baseValue)
