@@ -12,6 +12,12 @@ public class Book extends Product {
         this.author = author;
     }
 
+    //Polymorph metode
+    @Override
+    public void useProduct() {
+        //do something();
+    }
+
 
     @Override
     public String toString() {
