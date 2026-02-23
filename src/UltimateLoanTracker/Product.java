@@ -7,6 +7,7 @@ public abstract class Product {
     private double lateFee;
 
 
+
     // Konstruktør
     public Product(String title, int loanDays, double lateFee) {
         this.title = title;
