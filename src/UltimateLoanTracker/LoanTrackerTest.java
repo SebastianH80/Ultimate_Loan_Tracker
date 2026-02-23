@@ -69,11 +69,15 @@ public class LoanTrackerTest {
                 int baseValue = sc.nextInt();
 
                 loanTracker[i] = new Electronics(title, loanDays, lateFee, model, kitLevel, baseValue);
+                sc.nextLine();
+
             } else if (type.equalsIgnoreCase("video")) {
 
                 System.out.println("video duration (minutes): ");
                 int duration = sc.nextInt();
+
                 loanTracker[i] = new Video(title, loanDays, lateFee, duration);
+                sc.nextLine();
             } else {
                     System.out.println("Unknown type");
             }
