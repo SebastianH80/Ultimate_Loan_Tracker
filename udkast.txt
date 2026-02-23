@@ -1,0 +1,102 @@
+Udkast til 10 spørgsmål:
+ 
+
+Opgave: 
+
+1: How does your design support scalability? Det skaler "fint" når vi holder muligheden for at oprette nye klasser og produkter som underklasser og kan nemt gøres efterfølgende. Superclass & Sub-classes. 
+
+2: Abstraction 
+
+Abstration I Superclass indfører standard protokol for alle underklasser og sørger for alle har minimum requirements. Superklassen er abstract for at forcere subklasser til have minimum attributer og metoder. 
+
+3: Inheritance 
+
+Underklasser arver:  
+
+private String title; 
+private int loanDays; 
+private double lateFee; 
+
+Bliver alle arvet og strømlinet I underklasserne via super kaldet.  
+
+Inheritance er oplagt for at spare gentagelse. 
+
+Inheritance er oplagt hver gang projekter vokser og skal have en process som kan bruges på igen og igen. 
+
+ 
+
+4: Polymorphism 
+
+Vi opretter "hoved" I superklassen og forcere vores subklasser til at oprette kroppen på metoden.  
+
+Græsk ord poly (mange) og forms (former): Sæt en standard skabelon op, som så kan defineres af underkategorier. Mange former under struktur. 
+
+ 
+
+Vi bruger polymorphism fordi det er mere effektivt end instanceof og nemmere at genbruge, når du først har sat systemet op, så kalder du bare superklasse metoden også er den egentlige metode defineret I subklassen. <indsæt eksempel> 
+
+ 
+
+5: Encapsulation 
+
+Why are attributes private?: Vi bruger private attributes for at undgå overwrites og utilsigtede tilgåelse fra andre metoder og klasser. 
+
+Why do we use getters?: Vi bliver nød til at bruge getters og setters når vi først har gjort ting private, da udefra klasser og metoder ikke har adgang. 
+
+What problems could occur if attributes were public? Som svar I 1? Mange af de ting kunne dog undgåes via final. 
+
+ 
+
+6: Array Usage 
+
+Where and how do you you use Array[]: Vi bruger array I main, hvor vi opsætter vores produkter som kan udlånes. Vi bruger det som vores liste for samtlige produkter der kan udlånes og kan derfor nemt opskrives med enhanced for loop. 
+
+ 
+
+What are advantages and limitations?: Simpelt og nemt at forstå.  
+
+Arrays in Java have several limitations, including a fixed size that cannot be changed after creation, difficulty in inserting or deleting elements from the middle, and inefficient memory usage since they occupy space proportional to their declared size regardless of the number of elements used. Additionally, arrays can only store elements of the same type, which restricts their flexibility.<-copy pasted fra nettet. 
+
+What would change in a production system?: ? 
+
+ 
+
+7:Input Validation 
+
+How does the system validate user input?:  
+
+Why is input validation important? For at sikre input data og system kan tale sammen, det hjælper ikke at få bogstaver hvis du beder om tal. Programmet crasher hvis du prøver at gemme bogstaver I en integer eller lignede. 
+
+What could go wrong without it?: ^^ 
+
+How does validation improve system robustness?: istedet for at crashe, tester systemet om input passer med efterspugte, hvis ikke looper vi og giver fejl besked og beder bruger om at prøve igen. 
+
+ 
+
+8: Method Decomposition 
+
+Why is main() divided into smaller methods?: Bedre overblik, giver bedre struktur og nemmere at rette og oprette nye funktion eller debugge. 
+
+What responsibilities does each method have? Tjek kode. 
+
+How does this improve readability and maintainability? Som I #1 det er en fordel for alle at holde det overskueligt og nemt tilgåeligt, både for personen(erne) der oprettede det og dem der skal vedligeholde det. 
+
+ 
+
+9: Manual Sorting (Bubble Sort): Buble sort er en lavpraktisk funktion der sammenligner to indeks ved siden af hinanden og restrukturere dem hvis det ene er større end det andet, alt efter om man beder om højeste til laveste eller laveste til højeste. Hver gang den har sammenlignet to tal og flyttet dem rundt, hvis de skal, så sammenligner metoden det sidste tal, med det næste. 
+
+[1<2][2<3][3<4] etc, det er nemt at se det hurtigt bliver en langsom process ved store datasæt. 
+
+Why does it use nested loops?: Fordi den skal sammenligne to datasæt og flytte dem rundt, hvor den bruger temp adresser ind I mellem. Måske en mere effektiv algorithme ikke har behov for nested loop? 
+
+Is it efficient for large systems?: Nej det skaler meget dårligt. 
+
+ 
+
+10: Scalability & Future Development: 
+
+What changes are required?: Det kan nemt tilføjes ved at oprette nye klasser og produkter lige gyldigt hvad produkterne måtte være.  
+
+What parts of the system remain untouched?: De fleste ting forbliver I deres orginale stand, da vi stortset bare smider dem ind I elektronics subklassen og udvider vores array. 
+
+Why is your design future-proof: Fordi det er et lille simpelt system som tillader nye subklasser at blive oprettet. 
