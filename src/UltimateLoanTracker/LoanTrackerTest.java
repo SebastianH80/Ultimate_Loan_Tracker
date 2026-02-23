@@ -51,7 +51,6 @@ public class LoanTrackerTest {
             double lateFee = sc.nextDouble();
             sc.nextLine();
 
-
             //product specific attributer
             if (type.equalsIgnoreCase("book")) {
                 System.out.println("Author: ");
