@@ -14,10 +14,11 @@ public class Electronics extends Product{
     }
 
 
+
     //Polymorph metode
     @Override
     public void useProduct() {
-        //do something();
+        System.out.println("User is playing with " + this.model);
     }
     //override toString so everything prints
     @Override
