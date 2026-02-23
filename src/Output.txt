@@ -10,14 +10,57 @@ Start med at spørge om hvor mange items folk vil låne og lav derefter array i 
             Product[] fridge = new Product[items];
 
             for (int i = 0; i < loanTracker.length; i++){
-                        System.out.println("Product#" + (i+1) + "Enter product type (book/electronic/video): ");
+                        System.out.println("Enter Product#" + (i+1) +product type (book/electronic/video): ");
 
             --------------------------------------------------------------
 
 
             Jeg havde ikke før bemærket der var forskel på farverne i loun_output.png dvs jeg tror bare
             vi skal lave scanner til at spørge om "tekst i grønne farver" i item listen også er resten
-            udfyldt i forvejen.
+            udfyldt i forvejen?
 
 
+            Jeg er ikke sikker på det, lad os spørge aniko og gøre som hun siger i morgen også bare rette
+            de småting til i morgen.
+
+
+            BubbleSorting by loan days:
+
+            public static void sortByLoanDays(Product[] loanTracker) {
+
+                    for (int i = 0; i < loanTracker.length - 1; i++) {
+
+                        for (int j = 0; j < loanTracker.length - 1 - i; j++) {
+
+                            if (loanTracker[j].getLoanDays() > loanTracker[j + 1].getLoanDays()) {
+
+                                Product temp = loanTracker[j];
+                                loanTracker[j] = loanTracker[j + 1];
+                                loanTracker[j + 1] = temp;
+                            }
+                        }
+                    }
+                }
+            }
+
+             public static void sortByTitle(Product[] loanTracker) {
+
+                    // Bubble sort using nested loops
+                    for (int i = 0; i < loanTracker.length - 1; i++) {
+
+                        for (int j = 0; j < loanTracker.length - 1; j++) {
+
+                            // compareTo compares Strings alphabetically
+                            // If result > 0 → first name comes AFTER second name
+                            if (loanTracker[j].getTitle()
+                                    .compareTo(loanTracker[j + 1].getTitle()) > 0) {
+
+                                // Swap objects
+                                Product temp = loanTracker[j];
+                                loanTracker[j] = loanTracker[j + 1];
+                                loanTracker[j + 1] = temp;
+                            }
+                        }
+                    }
+                }
 
