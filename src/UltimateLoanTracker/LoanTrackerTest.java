@@ -1,5 +1,6 @@
 package UltimateLoanTracker;
 
+//import java.util.Arrays; - så vi kan sorter i alfabetisk rækkefølge i output
 import java.util.Scanner;
 
 public class LoanTrackerTest {
@@ -7,8 +8,15 @@ public class LoanTrackerTest {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        /*  Den velkomst besked :)
+        System.out.println("🚀 Welcome to the TechLab Loan System!");
+        System.out.println("---------------------------------------");
+        System.out.print("How many items do you want to borrow? ");
+        int count = sc.nextInt();
+        sc.nextLine();
+        */
 
-        Product[] loantracker = createloanTracker(sc);
+        Product[] loantracker = createloanTracker(sc); //tilføje counts
         //Product[] Product = new Product [4];
 
         /*
@@ -37,9 +45,11 @@ public class LoanTrackerTest {
 
             System.out.println("Enter Loan days: ");
             int loanDays = sc.nextInt();
+            sc.nextLine();
 
             System.out.println("Late Fee is: ");
-            int lateFee = sc.nextInt();
+            double lateFee = sc.nextDouble();
+            sc.nextLine();
 
 
             //product specific attributer
@@ -50,10 +60,10 @@ public class LoanTrackerTest {
                 loanTracker[i] = new Book(title, loanDays, lateFee, author);
             } else if (type.equalsIgnoreCase("electronics")) {
 
-                System.out.println("model: ");
+                System.out.println("Model: ");
                 String model = sc.nextLine();
 
-                System.out.println("kitLevel: ");
+                System.out.println("Kitlevel: ");
                 String kitLevel = sc.nextLine();
 
                 System.out.println("Basevalue: ");
@@ -62,7 +72,7 @@ public class LoanTrackerTest {
                 loanTracker[i] = new Electronics(title, loanDays, lateFee, model, kitLevel, baseValue);
             } else if (type.equalsIgnoreCase("video")) {
 
-                System.out.println("video duration(minutes): ");
+                System.out.println("video duration (minutes): ");
                 int duration = sc.nextInt();
                 loanTracker[i] = new Video(title, loanDays, lateFee, duration);
             } else {
@@ -71,8 +81,6 @@ public class LoanTrackerTest {
         }
 
         return loanTracker;
-
-
 
     }
 
@@ -83,7 +91,6 @@ public class LoanTrackerTest {
             System.out.println(product);
         }
     }
-
 
     public static void simulateDays(Product[] loanTracker) {
 

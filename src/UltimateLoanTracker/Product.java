@@ -37,6 +37,7 @@ public abstract class Product {
     }
 
     public void setLateFee(double lateFee) {
+        //skal vi lige overveje at fjerne, da vi nødvednigvis skal have den ændret?
         this.lateFee = lateFee;
     }
 
