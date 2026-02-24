@@ -87,7 +87,8 @@ public class LoanTrackerTest {
                 loanTracker[i] = new Video(title, loanDays, lateFee, duration);
                 sc.nextLine();
             } else {
-                    System.out.println("unknown type");
+                System.out.println("⚠️ Unknown type: " + type + ". Please try again for this item.");
+                i--;
             }
         }
 
