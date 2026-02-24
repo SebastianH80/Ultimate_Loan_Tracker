@@ -31,6 +31,28 @@ public class LoanTrackerTest {
         sc.close();
     }
 
+    public static int askForItems(Scanner sc) {
+
+        int count = 0;
+
+        while (true) {
+            System.out.print("How many items would you like? ");
+
+            if (sc.hasNextInt()) {
+                count = sc.nextInt();
+                sc.nextLine();
+
+                if (count > 0) break;
+                else System.out.println("Enter a positive number!");
+            } else {
+                System.out.println("Invalid number!");
+                sc.nextLine();
+            }
+        }
+
+        return count;
+    }
+
     public static Product[] createloanTracker(Scanner sc) {
 
         int items = 0;
@@ -43,7 +65,7 @@ public class LoanTrackerTest {
         for (int i = 0; i < loanTracker.length; i++){
             System.out.println("Enter product type (book/electronic/video): ");
             String type = sc.nextLine();
-            sc.nextLine();
+           sc.nextLine();
 
             System.out.println("Enter product name: ");
             String title = sc.nextLine();
@@ -87,7 +109,7 @@ public class LoanTrackerTest {
                 loanTracker[i] = new Video(title, loanDays, lateFee, duration);
                 sc.nextLine();
             } else {
-                System.out.println("⚠️ Unknown type: " + type + ". Please try again for this item.");
+                System.out.println(" Unknown type: " + type + ". Please try again.");
                 i--;
             }
         }
