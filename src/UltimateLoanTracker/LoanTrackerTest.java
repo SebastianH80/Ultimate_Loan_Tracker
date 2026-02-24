@@ -29,6 +29,7 @@ public class LoanTrackerTest {
         sortByTitle(loanTracker);
         printProduct(loanTracker);
 
+        simulateDays(loanTracker);
 
         sc.close();
     }
@@ -133,6 +134,8 @@ public class LoanTrackerTest {
     }
 
     public static void simulateDays(Product[] loanTracker) {
+        int loandays;
+        double LateFee;
 
         for (int day = 1; day <= 3; day++) {
 
@@ -141,9 +144,10 @@ public class LoanTrackerTest {
             for (Product product : loanTracker) {
 
                 product.decreaseLoanDays();
-
+                loandays = product.getLoanDays();
+                LateFee = product.getLateFee();
                 if (product.LoanDurationExpired()) {
-                    System.out.println(product.getTitle() + " Loan Period has ended ");
+                    System.out.println(product.getTitle() + " Loan Period has ended, latefee's beeing applied: " + (loandays-day)*LateFee*-1 + "kr");
                 } else {
                     System.out.println(product);
 
