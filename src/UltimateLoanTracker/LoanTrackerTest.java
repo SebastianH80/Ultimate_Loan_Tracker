@@ -61,7 +61,13 @@ public class LoanTrackerTest {
 
 
         for (int i = 0; i < loanTracker.length; i++){
-            System.out.println("Enter product type (book/electronics/video): ");
+            System.out.println( "\n---------------------------------------------" +
+                                "\nListing available items:"+
+                                "\nBook (1)" +
+                                "\nElectronics (2)" +
+                                "\nVideo (1)" +
+                                "\n---------------------------------------------" +
+                                "\nEnter product type: ");
             String type = sc.nextLine();
 
             System.out.println("Enter product name: ");

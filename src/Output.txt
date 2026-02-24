@@ -43,6 +43,8 @@ Start med at spørge om hvor mange items folk vil låne og lav derefter array i 
                 }
             }
 
+            BubbleSorting by title:
+
              public static void sortByTitle(Product[] loanTracker) {
 
                     // Bubble sort using nested loops
