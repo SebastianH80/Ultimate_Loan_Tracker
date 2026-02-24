@@ -8,13 +8,10 @@ public class LoanTrackerTest {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        /*  Den velkomst besked :)
+
         System.out.println("🚀 Welcome to the TechLab Loan System!");
         System.out.println("---------------------------------------");
-        System.out.print("How many items do you want to borrow? ");
-        int count = sc.nextInt();
-        sc.nextLine();
-        */
+
 
         Product[] loantracker = createloanTracker(sc); //tilføje counts
         //Product[] Product = new Product [4];
@@ -34,11 +31,17 @@ public class LoanTrackerTest {
 
     public static Product[] createloanTracker(Scanner sc) {
 
-        Product[] loanTracker = new Product[3];
+        int items = 0;
+        System.out.println("How many items would you like to borrow ?");
+        items = sc.nextInt();
+
+        Product[] loanTracker = new Product[items];
+
 
         for (int i = 0; i < loanTracker.length; i++){
             System.out.println("Enter product type (book/electronic/video): ");
             String type = sc.nextLine();
+            sc.nextLine();
 
             System.out.println("Enter product name: ");
             String title = sc.nextLine();
@@ -48,8 +51,11 @@ public class LoanTrackerTest {
             sc.nextLine();
 
             System.out.println("Late Fee is: ");
-            double lateFee = sc.nextDouble();
-            sc.nextLine();
+            double lateFee = 0.0;
+            if (sc.hasNextDouble()) {
+                lateFee = sc.nextDouble();
+                sc.nextLine();
+            }
 
             //product specific attributer
             if (type.equalsIgnoreCase("book")) {
