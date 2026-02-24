@@ -64,3 +64,25 @@ Start med at spørge om hvor mange items folk vil låne og lav derefter array i 
                     }
                 }
 
+
+public static int askForItems(Scanner sc) {
+
+        int count = 0;
+
+        while (true) {
+            System.out.print("How many items would you like? ");
+
+            if (sc.hasNextInt()) {
+                count = sc.nextInt();
+                sc.nextLine();
+
+                if (count > 0) break;
+                else System.out.println("Enter a positive number!");
+            } else {
+                System.out.println("Invalid number!");
+                sc.nextLine();
+            }
+        }
+
+        return count;
+    }
