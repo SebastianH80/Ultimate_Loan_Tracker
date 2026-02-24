@@ -57,6 +57,6 @@ public abstract class Product {
 
     @Override
     public String toString() {
-        return "Title: " + title + " | Loan days left: " + loanDays + " | Late fee per late day: "  + lateFee + "kr";
+        return "| Title: " + title + " | Loan days left: " + loanDays + " | Late fee/day: "  + lateFee + "kr | ";
     }
 }

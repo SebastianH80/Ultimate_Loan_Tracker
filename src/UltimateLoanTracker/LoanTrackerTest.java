@@ -122,14 +122,14 @@ public class LoanTrackerTest {
     }
 
     public static void printProduct(Product[] loanTracker) {
-        System.out.println("\n --- All Items sorted by title ---");
+        System.out.println("\n --- All Items sorted by title ---\n");
 
         for (Product product : loanTracker) {
             System.out.println(product);
         }
         int i;
         i = loanTracker.length;
-        System.out.println("You borrowed " + i + " items today");
+        System.out.println("\nYou borrowed " + i + " items today");
     }
 
     public static void simulateDays(Product[] loanTracker) {

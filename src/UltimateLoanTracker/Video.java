@@ -18,7 +18,7 @@ class Video extends Product {
     @Override
     public String toString() {
         return "Type: Video " + super.toString() +
-                " duration (minutes): " + this.duration + " min";
+                "duration (minutes): " + this.duration + " min";
 
     }
 }
