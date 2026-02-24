@@ -22,9 +22,9 @@ public class Electronics extends Product{
     //override toString so everything prints
     @Override
     public String toString() {
-        return "Electronic \t" + super.toString() +
-                "Model: \t" + this.model +
-                "Kitlevel\t: " + this.kitLevel +
-                "Basevalue\t: " + this.baseValue;
+        return "Electronic " + super.toString() +
+                "Model: " + this.model +
+                "Kitlevel: " + this.kitLevel +
+                "Basevalue: " + this.baseValue;
     }
 }
