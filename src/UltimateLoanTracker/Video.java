@@ -9,6 +9,11 @@ class Video extends Product {
         super(title, loanDays, lateFee);
         this.duration = duration;
     }
+    //Polymorph metode
+    @Override
+    public void useProduct() {
+        //do something();
+    }
 
     @Override
     public String toString() {
