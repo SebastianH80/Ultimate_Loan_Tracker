@@ -13,7 +13,7 @@ public class LoanTrackerTest {
         System.out.println("---------------------------------------");
 
 
-        Product[] loantracker = createloanTracker(sc); //tilføje counts
+        Product[] loanTracker = createloanTracker(sc); //tilføje counts
         //Product[] Product = new Product [4];
 
         /*
@@ -26,6 +26,8 @@ public class LoanTrackerTest {
         /*
         gøre brug til at printe output som i opgaven printLoanTracker(loanTracker);
         */
+        printProduct(loanTracker);
+
         sc.close();
     }
 
@@ -85,7 +87,7 @@ public class LoanTrackerTest {
                 loanTracker[i] = new Video(title, loanDays, lateFee, duration);
                 sc.nextLine();
             } else {
-                    System.out.println("Unknown type");
+                    System.out.println("unknown type");
             }
         }
 
