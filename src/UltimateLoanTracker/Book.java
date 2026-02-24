@@ -21,7 +21,7 @@ public class Book extends Product {
 
     @Override
     public String toString() {
-        return "Book\t" + super.toString() + "\tAuthor:\t" + author;
+        return "Book\t" + super.toString() + "\tAuthor:\t" + this.author;
     }
 }
 
