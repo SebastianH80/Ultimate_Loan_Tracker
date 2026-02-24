@@ -23,9 +23,7 @@ public class LoanTrackerTest {
         Product[3] = new Video("Intro to Robotics", 5, 3, 120);
         */
 
-        /*
-        gøre brug til at printe output som i opgaven printLoanTracker(loanTracker);
-        */
+
         sortByTitle(loanTracker);
         printProduct(loanTracker);
 
