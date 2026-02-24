@@ -61,7 +61,7 @@ public class LoanTrackerTest {
 
 
         for (int i = 0; i < loanTracker.length; i++){
-            System.out.println("Enter product type (book/electronic/video): ");
+            System.out.println("Enter product type (book/electronics/video): ");
             String type = sc.nextLine();
 
             System.out.println("Enter product name: ");
@@ -123,7 +123,7 @@ public class LoanTrackerTest {
         }
         int i;
         i = loanTracker.length;
-        System.out.println(" You borrowed " + i + " items today");
+        System.out.println("You borrowed " + i + " items today");
     }
 
     public static void simulateDays(Product[] loanTracker) {
