@@ -8,12 +8,13 @@ public class LoanTrackerTest {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        int count =  askForItems(sc);
 
         System.out.println("🚀 Welcome to the TechLab Loan System!");
         System.out.println("---------------------------------------");
 
 
-        Product[] loanTracker = createloanTracker(sc); //tilføje counts
+        Product[] loanTracker = createloanTracker(sc, count);
         //Product[] Product = new Product [4];
 
         /*
@@ -53,13 +54,9 @@ public class LoanTrackerTest {
         return count;
     }
 
-    public static Product[] createloanTracker(Scanner sc) {
+    public static Product[] createloanTracker(Scanner sc, int count) {
 
-        int items = 0;
-        System.out.println("How many items would you like to borrow ?");
-        items = sc.nextInt();
-
-        Product[] loanTracker = new Product[items];
+        Product[] loanTracker = new Product[count];
 
 
         for (int i = 0; i < loanTracker.length; i++){
