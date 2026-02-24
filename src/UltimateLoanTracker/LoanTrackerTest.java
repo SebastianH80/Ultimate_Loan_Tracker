@@ -63,7 +63,6 @@ public class LoanTrackerTest {
         for (int i = 0; i < loanTracker.length; i++){
             System.out.println("Enter product type (book/electronic/video): ");
             String type = sc.nextLine();
-           sc.nextLine();
 
             System.out.println("Enter product name: ");
             String title = sc.nextLine();
@@ -117,11 +116,14 @@ public class LoanTrackerTest {
     }
 
     public static void printProduct(Product[] loanTracker) {
-        System.out.println("\n --- all Items ---");
+        System.out.println("\n --- All Items sorted by title ---");
 
         for (Product product : loanTracker) {
             System.out.println(product);
         }
+        int i;
+        i = loanTracker.length;
+        System.out.println(" You borrowed " + i + " items today");
     }
 
     public static void simulateDays(Product[] loanTracker) {
