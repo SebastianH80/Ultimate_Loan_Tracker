@@ -1,7 +1,7 @@
 package UltimateLoanTracker;
 
 public abstract class Product {
-    // Attributers
+
     private String title;
     private int loanDays;
     private double lateFee;
@@ -19,26 +19,20 @@ public abstract class Product {
     public String getTitle() {
         return title;
     }
-
     public int getLoanDays() {
         return loanDays;
     }
-
     public double getLateFee() {
         return lateFee;
     }
-
     // Setters
     public void setTitle(String title) {
         this.title = title;
     }
-
     public void setLoanDays(int loanDays) {
         this.loanDays = loanDays;
     }
-
     public void setLateFee(double lateFee) {
-        //skal vi lige overveje at fjerne, da vi nødvednigvis skal have den ændret?
         this.lateFee = lateFee;
     }
 
