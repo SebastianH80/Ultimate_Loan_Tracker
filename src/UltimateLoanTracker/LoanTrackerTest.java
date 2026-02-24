@@ -7,12 +7,11 @@ public class LoanTrackerTest {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        int count =  askForItems(sc);
-
         System.out.println("🚀 Welcome to the TechLab Loan System!");
         System.out.println("---------------------------------------");
 
+        Scanner sc = new Scanner(System.in);
+        int count =  askForItems(sc);
 
         Product[] loanTracker = createloanTracker(sc, count);
         //Product[] Product = new Product [4];
@@ -27,7 +26,9 @@ public class LoanTrackerTest {
         /*
         gøre brug til at printe output som i opgaven printLoanTracker(loanTracker);
         */
+        sortByTitle(loanTracker);
         printProduct(loanTracker);
+
 
         sc.close();
     }
@@ -140,6 +141,26 @@ public class LoanTrackerTest {
 
                     //Clean Polymorphism
                     product.useProduct();
+                }
+            }
+        }
+    }
+    public static void sortByTitle(Product[] loanTracker) {
+
+        // Bubble sort using nested loops
+        for (int i = 0; i < loanTracker.length - 1; i++) {
+
+            for (int j = 0; j < loanTracker.length - 1; j++) {
+
+                // compareTo compares Strings alphabetically
+                // If result > 0 → first name comes AFTER second name
+                if (loanTracker[j].getTitle()
+                        .compareTo(loanTracker[j + 1].getTitle()) > 0) {
+
+                    // Swap objects
+                    Product temp = loanTracker[j];
+                    loanTracker[j] = loanTracker[j + 1];
+                    loanTracker[j + 1] = temp;
                 }
             }
         }
