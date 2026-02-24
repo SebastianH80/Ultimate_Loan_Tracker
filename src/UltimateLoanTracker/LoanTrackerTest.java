@@ -77,7 +77,7 @@ public class LoanTrackerTest {
             int loanDays = sc.nextInt();
             sc.nextLine();
 
-            System.out.println("Late Fee is: ");
+            System.out.println("Enter Late Fee: ");
             double lateFee = 0.0;
             if (sc.hasNextDouble()) {
                 lateFee = sc.nextDouble();
@@ -129,7 +129,7 @@ public class LoanTrackerTest {
         }
         int i;
         i = loanTracker.length;
-        System.out.println("\nYou borrowed " + i + " items today");
+        System.out.println("\nYou borrowed " + i + " item(s) today");
     }
 
     public static void simulateDays(Product[] loanTracker) {
