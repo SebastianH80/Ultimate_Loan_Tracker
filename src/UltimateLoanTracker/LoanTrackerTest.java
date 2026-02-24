@@ -29,7 +29,7 @@ public class LoanTrackerTest {
         sortByTitle(loanTracker);
         printProduct(loanTracker);
 
-        simulateDays(loanTracker);
+        //simulateDays(loanTracker); needs tweaking, logic nok working as intended
 
         sc.close();
     }
@@ -144,11 +144,11 @@ public class LoanTrackerTest {
             for (Product product : loanTracker) {
 
                 product.decreaseLoanDays();
-                loandays = product.getLoanDays();
-                LateFee = product.getLateFee();
-                today = (loandays - day)*-1;
+                loandays = product.getLoanDays();//antal dage man må låne en bog
+                LateFee = product.getLateFee();//prisen per dag over aftalte
+                today = (loandays - day)*-1;//ideen er (loan - days) giver negativt tal ved overtræk
                 if (product.LoanDurationExpired()) {
-                    System.out.println(product.getTitle() + " Loan Period has ended, latefee's beeing applied: " + today*LateFee + "kr");
+                    System.out.println(product.getTitle() + " Loan Period has ended, latefee's beeing applied: " + today*LateFee + "kr");//burde give dagens pris
                 } else {
                     System.out.println(product);
 
