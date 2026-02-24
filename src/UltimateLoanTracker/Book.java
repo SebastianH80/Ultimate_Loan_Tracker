@@ -4,7 +4,6 @@ public class Book extends Product {
 
     private String author;
 
-
     // Constructor
 
     public Book(String title, int loanDays, double lateFee, String author) {
