@@ -144,7 +144,7 @@ public class LoanTrackerTest {
                 product.decreaseLoanDays();
                 loandays = product.getLoanDays();//antal dage man må låne en bog
                 LateFee = product.getLateFee();//prisen per dag over aftalte
-                today = (loandays *-1);//giver negativt tal ved overtræk
+                today = (loandays *-1);//giver negativt tal ved overtræk, vender fortegn med -1
                 if (product.LoanDurationExpired()) {
                     System.out.println(product.getTitle() + " Loan Period has ended, latefee's beeing applied: " + today*LateFee + "kr");//burde give dagens pris
                 } else {
